@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>주소 관리 시스템</title>
+</head>
+
+<body>
+    <h1>삭제</h1>
+    <hr>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <a href="/">
+                    <button>홈으로 돌아가기</button>
+                </a>
+            </tr>
+            <tr>
+                <td>삭제 할 ID 입력 : </td>
+                <td>
+                    <form action="/web_data_delete" method="GET">
+                        <input type="text" id="ID" name="delete_id" required minlength="1" maxlength="5"
+                            value="{{delete_id or ''}}">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="button_style" align="right"><input type="submit" value="삭제"></div>
+                </td>
+            </tr>
+            </form>
+        </tbody>
+    </table>
+<script src="javascript.js"></script>
+</body>
+
+</html>

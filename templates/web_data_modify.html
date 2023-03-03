@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>주소 관리 시스템</title>
+</head>
+
+<body>
+    <h1>수정</h1>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <a href="/">
+                    <button>홈으로 돌아가기</button>
+                </a>
+            </tr>
+            <tr>
+                <td colspan="2">입력란</td>
+            </tr>
+        </thead>
+        <tbody>
+        <form action="/web_data_modify" method="GET">
+            <tr>
+                    <td>ID : </td>
+                    <td><input type="text" id="id" name="modify_id" required minlength="1" maxlength="5"
+                            value="{{modify_id or ''}}"></td>
+                    <td colspan="2"><input type="submit" value="수정"></td>
+            </tr>
+            <tr>
+                    <td>Address : </td>
+                    <td><input type="text" id="address" name="modify_address" maxlength="40"
+                            value="{{modify_address or ''}}"></td>
+                </form>
+            </tr>
+            <tr>
+                    <td>Owner_name : </td>
+                    <td><input type="text" id="owner_name" name="modify_owner_name" maxlength="10"
+                            value="{{modify_owner_name or ''}}"></td>
+                </form>
+            </tr>
+            <tr>
+                    <td>Building_name : </td>
+                    <td><input type="text" id="building_name" name="modify_building_name" maxlength="15"
+                            value="{{modify_building_name or ''}}"></td>
+                </form>
+            </tr>
+            <tr>
+                    <td>Number_of_people : </td>
+                    <td><input type="text" id="number_of_people" name="modify_number_of_people"
+                            value="{{modify_number_of_people or ''}}"></td>
+                </form>
+            </tr>
+            <tr>
+                    <td>Date_of_construction : </td>
+                    <td><input type="text" id="date_of_construction" name="modify_date_of_construction" maxlength="30"
+                            value="{{modify_date_of_construction or ''}}"></td>
+                </form>
+            </tr>
+            </form>
+        </tbody>
+    </table>
+    {{modify_results or ''}}
+<script src="javascript.js"></script>
+</body>
+
+</html>
